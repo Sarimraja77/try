@@ -182,6 +182,7 @@ it("retains exact inline script body coordinates, including unclosed scripts", (
     {
       scriptType: "classic",
       location: { start: { line: 2, column: 8 }, end: { line: 4, column: 0 } },
+      text: body,
     },
   ]);
   const unclosed = `${prefix}${body}`;
@@ -189,6 +190,7 @@ it("retains exact inline script body coordinates, including unclosed scripts", (
     {
       scriptType: "classic",
       location: { start: { line: 2, column: 8 }, end: { line: 4, column: 0 } },
+      text: body,
     },
   ]);
 });
@@ -206,6 +208,7 @@ it("counts every inline body but retains bounded locations", () => {
       start: { line: 1, column },
       end: { line: 1, column: column + 1 },
     },
+    text: "x",
   });
 });
 
